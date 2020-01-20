@@ -6,5 +6,5 @@ before_install:
     - docker build -t sambhaba/dockerdevandprod -f Dockerfile.dev .  
 
 script:
-    - docker run sambhaba/dockerdevandprod npm run test -- --coverage
+    - docker run -e CI=true sambhaba/dockerdevandprod npm run test -- --coverage
 
