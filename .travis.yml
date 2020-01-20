@@ -3,7 +3,7 @@ services:
     -docker
 
 before_install:
-    - docker build -t sambhaba/dockerdevandprod -f Dockerfile.dev    
+    - docker build -t sambhaba/dockerdevandprod -f Dockerfile.dev .  
 
 script:
     - docker run sambhaba/dockerdevandprod npm run test -- --coverage
